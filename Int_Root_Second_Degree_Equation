@@ -1,0 +1,64 @@
+//FULL NAME: Tran Hoang Huy
+//STUDENT ID: 19TM11032
+//DOB: 30/01/2001
+//LAST MODIFIED: 
+//PURPOSE: 
+
+#include <iostream>
+#include <time.h>		
+#include <stdlib.h>
+#include <conio.h>		
+#include <string.h>		
+#include <math.h>		
+#include <iostream>		
+#include <fstream>
+#include <ctype.h>
+using namespace std;
+
+
+void KTSCP_XKQ(float n);
+int main()
+{	do
+	{
+	int a, b, c;
+	float del;
+	cin >> a >> b >> c;
+	del = b * b - 4 * a * c;
+
+	if (a == 0)
+	{
+		KTSCP_XKQ((float(-c)/b));
+	}
+	else 
+	{ 
+		if (del < 0)
+		{
+			cout << "VO NGHIEM";
+		}
+		else if (del == 0)
+		{
+			KTSCP_XKQ(float(-b) / (2 * a));
+		}
+		else
+		{
+			KTSCP_XKQ(float(-b + sqrt(del)) / (2 * a));
+			cout << endl;
+			KTSCP_XKQ(float(-b - sqrt(del)) / (2 * a));
+		}
+
+	}
+	
+
+		
+		cout << "\n";
+	} while (_getch() != 27);
+	return 0;
+}
+
+void KTSCP_XKQ(float n)
+{
+	if (float (n)==int (n))
+	{
+		cout << n;
+	}
+}
